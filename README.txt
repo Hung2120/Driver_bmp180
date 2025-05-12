@@ -10,14 +10,43 @@ Cảm biến BMP180 được sử dụng rộng rãi trong các hệ thống nh�
 Tính toán độ cao (altitude) — ứng dụng trong drone, thiết bị đo độ cao, và hệ thống định vị GPS nâng cao.
 Ứng dụng trong trạm thời tiết mini, thiết bị IoT và các hệ thống điều khiển môi trường.
 ===========================================================================
-Cau truc du an
+THONG TIN PHAN CUNG
+Loai board: Raspberry Pi 4 Model B (co the dung cac dong khac)
+Cam bien: BMP180 ket noi bang giao tiep I2C-1
+Dia chi I2C: 0x77
+Chan ket noi:
+Chan BMP180	      Chan Raspberry Pi
+  SDA		            GPIO2 (pin 3)
+  SCL		            GPIO3 (pin 5)
+  VCC		            3.3V  (pin 1)
+  GND		            GND   (pin 6)
+===========================================================================
+CAU TRUC DU AN
 bmp180_project/
 ├── bmp180_overlay.dtbo                  
 ├── Makefile                    
 ├── bmp180_driver.c                          
 ├── bmp180_user.c  
 ===========================================================================
-Cac buoc chay du an
+THU VIEN CAN IMPORT CHO CHUONG TRINH USER (bmp180_user.c)
+#include <stdio.h>              // printf(), perror()
+#include <stdlib.h>             // abs(), malloc()
+#include <fcntl.h>              // open()
+#include <unistd.h>             // close()
+#include <sys/ioctl.h>          // ioctl()
+===========================================================================
+CAC GOI BAT BUOC CAN CAI TREN RASPBERRY PI
+-Lenh cai:
+	sudo apt update
+	sudo apt install -y build-essential raspberrypi-kernel-headers gcc libc6-dev i2c-tools
+
+      Goi			                              Tac dung
+build-essential			            Bien dich Makefile va module kernel
+raspberrypi-kernel-headers	    Cung cap header de bien dich file .ko
+gcc, libc6-dev			            Bien dich file .c cua chuong trinh user
+i2c-tools			                  Dung cac lenh nhu i2cdetect de kiem tra thiet bi I2C
+===========================================================================
+CAC BUOC CHAY DU AN
 -----------------------------------------------------------
 Buoc 1: Enable I2C on Raspberry Pi
 -----------------------------------------------------------
