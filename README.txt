@@ -15,11 +15,11 @@ Loai board: Raspberry Pi 4 Model B (co the dung cac dong khac)
 Cam bien: BMP180 ket noi bang giao tiep I2C-1
 Dia chi I2C: 0x77
 Chan ket noi:
-Chan BMP180	      Chan Raspberry Pi
-  SDA		            GPIO2 (pin 3)
-  SCL		            GPIO3 (pin 5)
-  VCC		            3.3V  (pin 1)
-  GND		            GND   (pin 6)
+Chan BMP180	      	Chan Raspberry Pi
+  SDA		          GPIO2 (pin 3)
+  SCL		          GPIO3 (pin 5)
+  VCC		          3.3V  (pin 1)
+  GND		          GND   (pin 6)
 ===========================================================================
 CAU TRUC DU AN
 bmp180_project/
@@ -40,11 +40,11 @@ CAC GOI BAT BUOC CAN CAI TREN RASPBERRY PI
 	sudo apt update
 	sudo apt install -y build-essential raspberrypi-kernel-headers gcc libc6-dev i2c-tools
 
-      Goi			                              Tac dung
-build-essential			            Bien dich Makefile va module kernel
-raspberrypi-kernel-headers	    Cung cap header de bien dich file .ko
-gcc, libc6-dev			            Bien dich file .c cua chuong trinh user
-i2c-tools			                  Dung cac lenh nhu i2cdetect de kiem tra thiet bi I2C
+      Goi			                        Tac dung
+build-essential			           Bien dich Makefile va module kernel
+raspberrypi-kernel-headers	    	   Cung cap header de bien dich file .ko
+gcc, libc6-dev			           Bien dich file .c cua chuong trinh user
+i2c-tools			           Dung cac lenh nhu i2cdetect de kiem tra thiet bi I2C
 ===========================================================================
 CAC BUOC CHAY DU AN
 -----------------------------------------------------------
